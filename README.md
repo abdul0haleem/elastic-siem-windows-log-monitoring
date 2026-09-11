@@ -556,3 +556,85 @@ Save the configuration file using:
 This configures the encryption key required by Fleet to securely manage encrypted saved objects.
 
 **Result:** The Fleet encryption key was successfully added to `kibana.yml`, completing the required encryption configuration for Fleet.
+
+### Step 25: Restart Kibana and Access Fleet
+
+After adding the Fleet encryption key to the Kibana configuration, the Kibana service was restarted to apply the new configuration.
+
+Run the following command:
+
+```bash
+sudo systemctl restart kibana
+```
+
+Wait approximately **30–60 seconds** for Kibana to fully restart. The service status can be verified using:
+
+```bash
+sudo systemctl status kibana
+```
+
+Once Kibana is running, refresh the browser and access the Kibana web interface:
+
+```text
+http://localhost:5601
+```
+
+Log in using the **`elastic`** user credentials:
+
+- **Username:** `elastic`
+- **Password:** The configured `elastic` user password
+
+After successful authentication, navigate to:
+
+**☰ Menu → Management → Fleet**
+
+The Fleet management page should now display the **Add Fleet Server** option, indicating that Fleet is ready for the next stage of configuration.
+
+![Screenshot 25: Showing Kibana Fleet Add Fleet Server](images/26-fleet-server-policy.png)
+
+*Figure 25: Fleet management interface displaying the **Add Fleet Server** option, confirming that Fleet is successfully enabled and ready for Fleet Server configuration.*
+
+**Result:** Kibana was successfully restarted with the new encryption configuration, and the Fleet management interface was accessed successfully.
+
+### Step 26: Add a Fleet Server
+
+The **Add a Fleet Server** option was selected to begin configuring Fleet Server for the Elastic SIEM lab.
+
+On the **Add a Fleet Server** page, **Quick Start** was selected. A new Fleet Server policy was created with the following configuration:
+
+- **Policy Name:** `SOC-Lab-Fleet-Server`
+- **Other Settings:** Kept at their default values
+- **Fleet Server URL:** `https://192.168.29.106:8220`
+
+The following ports were used in the Elastic Stack deployment:
+
+- **9200** → Elasticsearch
+- **5601** → Kibana
+- **8220** → Fleet Server
+
+The communication flow for the lab environment is:
+
+```text
+Windows 11 Elastic Agent
+        ↓
+https://192.168.29.106:8220
+        ↓
+Fleet Server (Kali Linux)
+        ↓
+Elasticsearch :9200
+        ↓
+Kibana :5601
+```
+
+After completing the Fleet Server configuration, Kibana confirmed that the **Fleet Server policy** was created successfully. The required service token was generated, and the Fleet Server host was configured as:
+
+```text
+https://192.168.29.106:8220
+```
+
+![Screenshot 26: Showing Fleet Server Configuration](images/26-fleet-server-policy.png)
+
+*Figure 26: Fleet Server policy successfully created and configured with the Kali Linux Fleet Server endpoint.*
+
+**Result:** The `SOC-Lab-Fleet-Server` policy was successfully created, and the Fleet Server host and service token were generated. The next stage is to install and start Fleet Server on the Kali Linux machine.
+
