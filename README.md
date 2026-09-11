@@ -471,10 +471,42 @@ Active: active (running)
 
 The **active (running)** status confirms that Kibana started successfully and is running on the Kali Linux system.
 
-![Screenshot 20: Showing Kibana Service Status](images/20-kibana-login-page.png)
+![Screenshot 20: Showing Kibana Service Status](images/19-kibana-auto-start.png)
 
 *Figure 20: Kibana service successfully started and ready for browser-based access.*
 
 **Result:** Kibana was successfully started and is ready for browser-based access and further configuration.
 
+### Step 21: Open Kibana in the Browser
 
+After confirming that the Kibana service was running successfully, the Kibana web interface was accessed through a web browser on the Kali Linux virtual machine.
+
+The following address was entered in the browser:
+
+```text
+http://localhost:5601
+```
+
+The **Kibana login page** was displayed, requesting authentication with the built-in **`elastic`** user.
+
+**Username:**
+
+```text
+elastic
+```
+
+**Password:**
+
+The password generated for the **`elastic`** user during the password reset performed in **Step 11** was entered.
+
+[Screenshot 21: Showing Kibana Login Page](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/blob/main/images/20-kibana-login-page.png) ([image](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/raw/main/images/20-kibana-login-page.png))
+
+*Figure 21: Kibana login page displayed in the browser, requesting authentication with the built-in **`elastic`** user.*
+
+After entering the correct credentials, the authentication was successful and the **Kibana web interface** was displayed.
+
+[Screenshot 22: Showing Kibana After Successful Login](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/blob/main/images/23-kibana-successful-login.png) ([image](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/raw/main/images/23-kibana-successful-login.png))
+
+*Figure 22: Kibana web interface successfully opened after authentication, confirming that Kibana is accessible and ready for further configuration.*
+
+**Result:** Kibana was successfully accessed through the browser and the **`elastic`** user authentication was completed successfully.
