@@ -36,6 +36,6 @@ Kali Linux was configured as a virtual machine using **Oracle VirtualBox**. This
 
 The Kali Linux virtual machine was successfully started and prepared for the subsequent stages of the project implementation.
 
-![Screenshot 1: Kali Linux running on a VirtualBox Virtual Machine](screenshots/01-kali-virtualbox.png)
+![Screenshot 1: Kali Linux running on a VirtualBox Virtual Machine](images/01-kali-virtualbox.png)
 
 *Figure 1: Kali Linux virtual machine configured in VirtualBox.*
