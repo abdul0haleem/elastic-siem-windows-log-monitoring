@@ -362,3 +362,6 @@ The file was opened in the **Nano text editor** so that the required configurati
 ![Screenshot 16: Showing the Kibana Configuration File](images/16-kibana-config-file.png)
 
 *Figure 16: Kibana configuration file `kibana.yml` opened in the Nano text editor.*
+
+
+
