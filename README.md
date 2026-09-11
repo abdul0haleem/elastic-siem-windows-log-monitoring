@@ -590,7 +590,7 @@ After successful authentication, navigate to:
 
 The Fleet management page should now display the **Add Fleet Server** option, indicating that Fleet is ready for the next stage of configuration.
 
-![Screenshot 25: Showing Kibana Fleet Add Fleet Server](images/26-fleet-server-policy.png)
+![Screenshot 25: Showing Kibana Fleet Add Fleet Server](images/24-fleet-add-server)
 
 *Figure 25: Fleet management interface displaying the **Add Fleet Server** option, confirming that Fleet is successfully enabled and ready for Fleet Server configuration.*
 
