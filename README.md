@@ -718,4 +718,47 @@ Port **8220** is the communication port used by Fleet Server for Elastic Agent m
 
 These checks confirm that the **Elastic Agent service is running and Fleet Server is actively listening on port 8220**.
 
+### Step 30: Check Fleet in Kibana
 
+After installing and starting Fleet Server, its status was verified from the Kibana Fleet interface.
+
+Navigate to:
+
+**Kibana → Fleet → Agents**
+
+The Kali Linux machine should be listed as a **Fleet Server/Agent**. Its status should ideally appear as:
+
+**Healthy 🟢**
+
+A **Healthy** status confirms that the Fleet Server is successfully enrolled, running, and communicating with Kibana and Elasticsearch.
+
+![Screenshot 32: Kibana Fleet Agents page showing the Kali Linux Fleet Server](images/32-kali-fleet-server-healthy.png)
+
+*Figure 32: Fleet Agents page confirming that the Kali Linux Fleet Server is healthy and successfully enrolled.*
+
+**Result:** Fleet Server setup was completed successfully.
+
+---
+
+### Step 31: Add the Windows 11 VM
+
+The Windows 11 virtual machine was added to Fleet so that Elastic can collect and monitor **Windows Security, System, and Application logs**.
+
+In Kibana, navigate to:
+
+**☰ Menu → Fleet → Agents → Add agent**
+
+Select:
+
+**Enroll in Fleet**
+
+Under **Agent policy**, select an existing endpoint policy. If a suitable policy does not exist, create a new policy with the following details:
+
+* **Agent policy name:** Windows-SOC-Lab
+* **Description:** Windows 11 endpoint monitoring for SOC lab
+
+Then click **Create agent policy**.
+
+![Screenshot 33: Kibana Fleet Add agent page showing the Windows-SOC-Lab agent policy](images/33-windows-soc-lab-agent-policy.png)
+
+*Figure 33: Kibana Fleet Add agent page showing the Windows-SOC-Lab agent policy being created.*
