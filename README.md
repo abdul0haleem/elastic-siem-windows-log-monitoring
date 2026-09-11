@@ -762,3 +762,71 @@ Then click **Create agent policy**.
 ![Screenshot 33: Kibana Fleet Add agent page showing the Windows-SOC-Lab agent policy](images/33-windows-soc-lab-agent-policy.png)
 
 *Figure 33: Kibana Fleet Add agent page showing the Windows-SOC-Lab agent policy being created.*
+
+### Step 32: Add Windows Integration
+
+After creating the Windows agent policy, the **Windows integration** was added to enable the collection of Windows event logs.
+
+Navigate to:
+
+**Kibana → Fleet → Agent policies**
+
+Open the newly created **Windows-SOC-Lab** policy and click:
+
+**Add integration**
+
+![Screenshot 34: Windows-SOC-Lab agent policy page showing the Add integration option](images/34-windows-soc-lab-add-integration.png)
+
+*Figure 34: Windows-SOC-Lab agent policy page showing the Add integration option.*
+
+Search for **Windows** and select the **Windows integration** from the available integrations.
+
+![Screenshot 35: Kibana Integration page displaying the Windows integration option in the search results](images/35-windows-integration-search.png)
+
+*Figure 35: Kibana Integration page displaying the Windows integration option in the search results.*
+
+Click **Add Windows** / **Add integration** to add the integration to the policy.
+
+![Screenshot 36: Windows-SOC-Lab agent policy showing the Windows integration successfully added](images/36-windows-integration-added.png)
+
+*Figure 36: Windows-SOC-Lab agent policy showing the Windows integration successfully added.*
+
+**Result:** The Windows agent policy was created and configured with the Windows integration, preparing the policy to collect Windows endpoint logs.
+
+### Step 33: Add the Windows Agent
+
+The Windows 11 virtual machine was connected to Fleet by installing the **Elastic Agent** and enrolling it with the **Windows-SOC-Lab** agent policy.
+
+In Kibana, navigate to:
+
+**Fleet → Agents → Add agent**
+
+Select **Windows** and, under **Agent policy**, select:
+
+**Windows-SOC-Lab**
+
+Kibana then displays the **PowerShell installation command** required to install and enroll the Elastic Agent.
+
+**Open the Windows 11 VM**
+
+The Windows 11 virtual machine was opened in **VMware Workstation**.
+
+![Screenshot 37: Windows 11 virtual machine running in VMware Workstation](images/37-windows-11-vmware.png)
+
+*Figure 37: Windows 11 virtual machine running in VMware Workstation.*
+
+Open Windows 11 and launch **PowerShell as Administrator**.
+
+Copy and run the PowerShell installation command provided by Kibana.
+
+![Screenshot 38: Windows 11 PowerShell showing the Elastic Agent installation and enrollment completed successfully](images/38-windows-elastic-agent-enrollment.png)
+
+*Figure 38: Windows 11 PowerShell showing the Elastic Agent installation and enrollment completed successfully.*
+
+The Elastic Agent installation was then verified from the Kali Linux/Kibana Fleet environment.
+
+![Screenshot 39: Kali Linux/Kibana environment showing the Windows Elastic Agent successfully enrolled with Fleet](images/39-windows-agent-enrolled.png)
+
+*Figure 39: Kali Linux/Kibana environment showing the Windows Elastic Agent successfully enrolled with Fleet.*
+
+**Result:** The Elastic Agent was successfully installed on the Windows 11 virtual machine and enrolled with the **Windows-SOC-Lab** agent policy in Fleet.
