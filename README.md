@@ -606,6 +606,10 @@ Active: active (running)
 
 The **active (running)** status confirms that Kibana started successfully and is running on the Kali Linux system.
 
+![Screenshot 19: Showing Kibana Started Successfully](images/21-kibana-service-status)
+
+*Figure 19: Kibana status confirms that Kibana started successfully and is running on the Kali Linux system.*
+
 **Result:** Kibana was successfully started and is ready for browser-based access and further configuration.
 
 ---
