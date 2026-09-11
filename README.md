@@ -309,3 +309,56 @@ The output confirmed the following:
 
 **Result:** Elasticsearch was successfully installed, configured, secured, and verified. The Elasticsearch component of the lab is ready for the next stage of the Elastic Stack deployment.
 
+### Step 14: Install Kibana
+
+After successfully installing and verifying Elasticsearch, the next step was to install **Kibana 9.x**. Kibana provides the web-based interface for interacting with the Elastic Stack and will be used later to view, search, analyze, and visualize the security data collected from the Windows endpoint.
+
+The following command was executed:
+
+```bash
+sudo apt install kibana -y
+```
+
+The installation was allowed to complete. The installed version was **Kibana 9.5.3**.
+
+![Screenshot 14: Showing Kibana Installation](images/14-kibana-installation.png)
+
+*Figure 14: Kibana 9.5.3 being installed successfully on the Kali Linux virtual machine.*
+
+**Result:** Kibana 9.5.3 was successfully installed and is ready for configuration in the next step.
+
+### Step 15: Generate a Kibana Enrollment Token
+
+Because Elasticsearch security is enabled, a **Kibana enrollment token** was generated to securely connect Kibana with the Elasticsearch instance.
+
+The following command was executed:
+
+```bash
+sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
+
+The command generated a long **Kibana enrollment token**. The token was copied and stored temporarily because it would be required during the Kibana configuration process in the next step.
+
+![Screenshot 15: Showing the Kibana Enrollment Token](images/15-kibana-enrollment-token.png)
+
+*Figure 15: Terminal output displaying the generated Kibana enrollment token.*
+
+**Result:** The Kibana enrollment token was successfully generated and is ready to be used for the Kibana configuration.
+
+### Step 16: Configure Kibana
+
+The next step was to configure Kibana so that it can connect securely to the Elasticsearch instance.
+
+The Kibana configuration file was opened using the following command:
+
+```bash
+sudo nano /etc/kibana/kibana.yml
+```
+
+This configuration file contains the settings required to configure Kibana, including its network address and connection details for Elasticsearch.
+
+The file was opened in the **Nano text editor** so that the required configuration changes could be made in the following steps.
+
+![Screenshot 16: Showing the Kibana Configuration File](images/16-kibana-config-file.png)
+
+*Figure 16: Kibana configuration file `kibana.yml` opened in the Nano text editor.*
