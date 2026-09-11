@@ -2,6 +2,53 @@
 
 Hands-on Elastic SIEM lab demonstrating the deployment of Elasticsearch, Kibana, and Fleet Server on Kali Linux, along with Elastic Agent deployment on a Windows 11 virtual machine for centralized Windows log collection, monitoring, and analysis.
 
+# Elastic SIEM Setup and Windows Endpoint Monitoring
+
+## 📖 Project Overview
+
+This project demonstrates the implementation of a basic **Elastic SIEM lab environment** for centralized security monitoring and Windows endpoint log analysis. The lab was built using **Kali Linux** and **Windows 11** virtual machines, with Kali Linux deployed through **VirtualBox** and Windows 11 deployed through **VMware Workstation**.
+
+The Elastic Stack was configured on the Kali Linux virtual machine, including **Elasticsearch**, **Kibana**, and **Fleet Server**. An **Elastic Agent** was then deployed and enrolled on the Windows 11 endpoint through Fleet to collect and forward Windows security telemetry.
+
+The collected endpoint data was centralized in **Elasticsearch** and analyzed through **Kibana**, providing hands-on experience with **SIEM deployment, endpoint monitoring, centralized log collection, Fleet management, and security event analysis** in a controlled SOC lab environment.
+
+## 🎯 Objectives
+
+- To deploy and configure a basic **Elastic SIEM environment** using Elasticsearch, Kibana, and Fleet Server.
+- To configure **Kali Linux** as the central SIEM server and **Windows 11** as the monitored endpoint.
+- To enroll and manage the Windows 11 endpoint using **Elastic Agent and Fleet**.
+- To collect and centralize **Windows security telemetry** for monitoring and analysis.
+- To use **Kibana Discover** to search, filter, and analyze collected security events.
+- To gain practical experience with **SIEM deployment, endpoint monitoring, log collection, and security event analysis**.
+- To develop a practical foundation for **SOC operations and incident investigation**.
+
+## 🖥️ Lab Environment
+
+The lab environment was designed using two virtual machines hosted on separate virtualization platforms. **Kali Linux** was deployed using **VirtualBox** and configured as the central Elastic SIEM server, while **Windows 11** was deployed using **VMware Workstation** and configured as the monitored endpoint.
+
+| Component | Platform | Role |
+|---|---|---|
+| **Kali Linux** | VirtualBox | Elastic SIEM server |
+| **Windows 11** | VMware Workstation | Monitored endpoint |
+| **Elasticsearch** | Kali Linux | Data storage and indexing |
+| **Kibana** | Kali Linux | Visualization and security event analysis |
+| **Fleet Server** | Kali Linux | Elastic Agent management |
+| **Elastic Agent** | Windows 11 | Endpoint telemetry and log collection |
+
+The Windows 11 endpoint communicated with the **Fleet Server** running on Kali Linux, which managed the Elastic Agent and facilitated endpoint data collection for analysis through **Elasticsearch** and **Kibana**.
+
+## 🛠️ Tools Used
+
+- **VirtualBox** — Virtualization platform used to deploy the Kali Linux virtual machine
+- **Kali Linux** — SIEM server and Elastic Stack deployment environment
+- **VMware Workstation** — Virtualization platform used to deploy the Windows 11 virtual machine
+- **Windows 11** — Monitored endpoint for security event collection
+- **Elasticsearch** — Centralized data storage and indexing
+- **Kibana** — Security event visualization, search, and analysis
+- **Fleet Server** — Centralized management of Elastic Agents
+- **Elastic Agent** — Endpoint telemetry and log collection
+- **Kibana Discover** — Log searching and security event investigation
+
 ## ⚙️ Project Implementation
 
 ### In This Project, I Used
@@ -1018,3 +1065,11 @@ This project provided practical experience in deploying and configuring a basic 
 The project also provided an understanding of how **Windows Security, System, and Application events** can be collected from a Windows 11 endpoint and made available through a centralized SIEM platform. Configuring **Fleet Server, Agent Policies, and Windows integrations** helped develop an understanding of communication between the endpoint and the Elastic Stack.
 
 The verification process using **Fleet** and **Kibana Discover** demonstrated how security analysts can monitor enrolled endpoints, verify agent health, examine collected telemetry, and search security events for monitoring and investigation.
+
+## ✅ Conclusion
+
+The project successfully demonstrated the implementation of a basic **SIEM lab using the Elastic Stack**. **Elasticsearch** was configured as the centralized data storage and indexing platform, while **Kibana** was used for visualization and security event analysis. **Fleet Server** and **Elastic Agent** were configured to manage and collect telemetry from a **Windows 11 endpoint**.
+
+The successful enrollment and healthy status of the Windows endpoint in **Fleet**, along with the successful collection of Windows security telemetry in **Kibana Discover**, confirmed that the endpoint monitoring and log collection process was working successfully.
+
+Overall, the project provided valuable hands-on experience with **SIEM deployment, centralized log collection, Windows endpoint monitoring, Elastic Stack configuration, Fleet management, and security event analysis**, establishing a practical foundation for further **SOC and security operations activities**.
