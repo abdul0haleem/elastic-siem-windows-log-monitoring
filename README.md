@@ -654,7 +654,7 @@ After entering the correct credentials, the authentication was successful and th
 
 ---
 
-### Step 23: Open Fleet
+### Step 22: Open Fleet
 
 After successfully logging in to Kibana, the main Kibana navigation menu was opened to access **Fleet**. Fleet is used to manage **Elastic Agents**, configure **Agent Policies**, and manage endpoint integrations.
 
@@ -672,7 +672,7 @@ The **Fleet** page provides the management interface required to configure the E
 
 ---
 
-### Step 24: Add the Fleet Encryption Key
+### Step 23: Add the Fleet Encryption Key
 
 Although Elasticsearch and Kibana were configured and running successfully, Fleet requires an **encrypted saved objects encryption key** to securely store sensitive Fleet-related information.
 
@@ -704,7 +704,7 @@ This configures the encryption key required by Fleet to securely manage encrypte
 
 ---
 
-### Step 25: Restart Kibana and Access Fleet
+### Step 24: Restart Kibana and Access Fleet
 
 After adding the Fleet encryption key to the Kibana configuration, the Kibana service was restarted to apply the new configuration.
 
@@ -745,7 +745,7 @@ The Fleet management page should now display the **Add Fleet Server** option, in
 
 ---
 
-### Step 26: Add a Fleet Server
+### Step 25: Add a Fleet Server
 
 The **Add a Fleet Server** option was selected to begin configuring Fleet Server for the Elastic SIEM lab.
 
@@ -789,7 +789,7 @@ https://192.168.29.106:8220
 
 ---
 
-### Step 27: Download the Correct Elastic Agent
+### Step 26: Download the Correct Elastic Agent
 
 Before downloading the Elastic Agent, the Kali Linux system architecture was checked to ensure that the correct package was selected.
 
@@ -829,7 +829,7 @@ After selecting the correct package, click **Save and continue** / **Continue** 
 
 ---
 
-### Step 28: Run the Fleet Server Installation Command
+### Step 27: Run the Fleet Server Installation Command
 
 Return to the **Fleet → Add a Fleet Server** page and copy the **Linux x86_64 Fleet Server installation command** provided by Kibana.
 
@@ -841,7 +841,7 @@ Run the copied command in the Kali Linux Terminal to install and enroll the Elas
 
 ---
 
-### Step 29: Verify the Elastic Agent Service
+### Step 28: Verify the Elastic Agent Service
 
 The Elastic Agent service was further verified using the following command:
 
@@ -875,7 +875,7 @@ These checks confirm that the **Elastic Agent service is running and Fleet Serve
 
 ---
 
-### Step 30: Check Fleet in Kibana
+### Step 29: Check Fleet in Kibana
 
 After installing and starting Fleet Server, its status was verified from the Kibana Fleet interface.
 
@@ -897,7 +897,7 @@ A **Healthy** status confirms that the Fleet Server is successfully enrolled, ru
 
 ---
 
-### Step 31: Add the Windows 11 VM
+### Step 30: Add the Windows 11 VM
 
 The Windows 11 virtual machine was added to Fleet so that Elastic can collect and monitor **Windows Security, System, and Application logs**.
 
@@ -922,7 +922,7 @@ Then click **Create agent policy**.
 
 ---
 
-### Step 32: Add Windows Integration
+### Step 31: Add Windows Integration
 
 After creating the Windows agent policy, the **Windows integration** was added to enable the collection of Windows event logs.
 
@@ -954,7 +954,7 @@ Click **Add Windows** / **Add integration** to add the integration to the policy
 
 ---
 
-### Step 33: Add the Windows Agent
+### Step 32: Add the Windows Agent
 
 The Windows 11 virtual machine was connected to Fleet by installing the **Elastic Agent** and enrolling it with the **Windows-SOC-Lab** agent policy.
 
@@ -994,7 +994,7 @@ The Elastic Agent installation was then verified from the Kali Linux/Kibana Flee
 
 ---
 
-### Step 34: Verify the Windows Agent in Kibana
+### Step 33: Verify the Windows Agent in Kibana
 
 After installing the Elastic Agent on the Windows 11 VM, its enrollment and health status were verified in Kibana.
 
@@ -1033,7 +1033,7 @@ Kibana
 
 ---
 
-### Step 35: Verify Windows Logs in Discover
+### Step 34: Verify Windows Logs in Discover
 
 After enrolling the Windows 11 Elastic Agent, the collected Windows logs were verified in Kibana **Discover**.
 
