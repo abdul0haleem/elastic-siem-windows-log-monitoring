@@ -526,3 +526,33 @@ The **Fleet** page provides the management interface required to configure the E
 *Figure 23: Kibana navigation panel displaying the **Fleet** option under **Management**.*
 
 **Result:** The Fleet management interface was successfully accessed and is ready for Fleet Server and Elastic Agent configuration.
+
+### Step 24: Add the Fleet Encryption Key
+
+Although Elasticsearch and Kibana were configured and running successfully, Fleet requires an **encrypted saved objects encryption key** to securely store sensitive Fleet-related information.
+
+Open the Kibana configuration file using:
+
+```bash
+sudo nano /etc/kibana/kibana.yml
+```
+
+Add the following line at the bottom of the file:
+
+```yaml
+xpack.encryptedSavedObjects.encryptionKey: "kali-elastic-soc-lab-encryption-key-2026"
+```
+
+The encryption key must be **at least 32 characters long**.
+
+![Screenshot 24: Showing Kibana Encryption Key Configuration](images/25-kibana-encryption-key.png)
+
+*Figure 24: Kibana configuration file showing the `xpack.encryptedSavedObjects.encryptionKey` configured in `kibana.yml`.*
+
+Save the configuration file using:
+
+**Ctrl + O → Enter → Ctrl + X**
+
+This configures the encryption key required by Fleet to securely manage encrypted saved objects.
+
+**Result:** The Fleet encryption key was successfully added to `kibana.yml`, completing the required encryption configuration for Fleet.
