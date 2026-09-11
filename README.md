@@ -448,3 +448,33 @@ This ensures that Kibana will automatically start when the Kali Linux virtual ma
 ![Screenshot 19: Showing Kibana Configured to Start Automatically](images/19-kibana-auto-start.png)
 
 *Figure 19: Kibana successfully enabled as a system service to start automatically with Kali Linux.*
+
+### Step 20: Start Kibana
+
+After enabling Kibana as a system service, the Kibana service was started manually using the following command:
+
+```bash
+sudo systemctl start kibana.service
+```
+
+The status of the service was then checked to verify that Kibana was running successfully:
+
+```bash
+sudo systemctl status kibana.service
+```
+
+Kibana may take approximately **30–60 seconds** to fully initialize. The service status was checked for:
+
+```text
+Active: active (running)
+```
+
+The **active (running)** status confirms that Kibana started successfully and is running on the Kali Linux system.
+
+![Screenshot 20: Showing Kibana Service Status](images/20-kibana-login-page.png)
+
+*Figure 20: Kibana service successfully started and ready for browser-based access.*
+
+**Result:** Kibana was successfully started and is ready for browser-based access and further configuration.
+
+
