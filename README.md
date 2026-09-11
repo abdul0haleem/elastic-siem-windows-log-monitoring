@@ -363,5 +363,36 @@ The file was opened in the **Nano text editor** so that the required configurati
 
 *Figure 16: Kibana configuration file `kibana.yml` opened in the Nano text editor.*
 
+### Step 17: Configure the Kibana Server Address
 
+The Kibana configuration file was modified to allow Kibana to be accessed through the lab network, including from the Windows 11 virtual machine.
 
+The following line was located in `/etc/kibana/kibana.yml`:
+
+```yaml
+#server.host: "localhost"
+```
+
+It was changed to:
+
+```yaml
+server.host: "0.0.0.0"
+```
+
+Setting the server address to `0.0.0.0` allows Kibana to listen for connections on the available network interfaces, making it accessible from a browser on the lab network.
+
+At this stage, the **Elasticsearch connection settings were left unchanged**. No `elasticsearch.hosts` or authentication credentials were manually added because the **Kibana enrollment token** generated in Step 14 will be used to establish the secure connection with Elasticsearch.
+
+#### Save the Configuration
+
+After making the change, the file was saved in Nano using:
+
+1. Press **Ctrl + O**
+2. Press **Enter** to confirm the filename
+3. Press **Ctrl + X** to exit Nano
+
+The configuration file was then closed, and no further changes were made at this stage.
+
+![Screenshot 17: Showing the Kibana Server Address Configuration](images/17-kibana-server-address.png)
+
+*Figure 17: Kibana configuration file showing `server.host: "0.0.0.0"` configured in `kibana.yml`.*
