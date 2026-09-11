@@ -499,13 +499,13 @@ elastic
 
 The password generated for the **`elastic`** user during the password reset performed in **Step 11** was entered.
 
-[Screenshot 21: Showing Kibana Login Page](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/blob/main/images/20-kibana-login-page.png) ([image](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/raw/main/images/20-kibana-login-page.png))
+![Screenshot 21: Showing Kibana Login Page](images/20-kibana-login-page.png)
 
 *Figure 21: Kibana login page displayed in the browser, requesting authentication with the built-in **`elastic`** user.*
 
 After entering the correct credentials, the authentication was successful and the **Kibana web interface** was displayed.
 
-[Screenshot 22: Showing Kibana After Successful Login](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/blob/main/images/23-kibana-successful-login.png) ([image](https://github.com/abdul0haleem/elastic-siem-windows-log-monitoring/raw/main/images/23-kibana-successful-login.png))
+![Screenshot 22: Showing Kibana After Successful Login](images/23-kibana-successful-login.png)
 
 *Figure 22: Kibana web interface successfully opened after authentication, confirming that Kibana is accessible and ready for further configuration.*
 
