@@ -365,7 +365,7 @@ sudo curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic https://local
 
 The command uses the previously identified CA certificate to establish a trusted HTTPS connection with Elasticsearch running on **localhost at port 9200**. The `-u elastic` option specifies the built-in `elastic` superuser for authentication.
 
-When prompted for the password, the **current password for the `elastic` user** was entered.
+When prompted for the password, the **current password for the `elastic` user** can be entered. In this case, however, a new password was generated and used.
 
 ![Screenshot 11: Showing Prompt for Entering the Password](images/11-elasticsearch-password-prompt.png)
 
