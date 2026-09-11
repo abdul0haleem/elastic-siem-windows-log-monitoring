@@ -634,7 +634,7 @@ elastic
 
 **Password:**
 
-The password generated for the **`elastic`** user during the password reset performed in **Step 11** was entered.
+The password generated for the **`elastic`** user during the password reset performed in **Step 12** was entered.
 
 ![Screenshot 21: Showing Kibana Login Page](images/20-kibana-login-page.png)
 
