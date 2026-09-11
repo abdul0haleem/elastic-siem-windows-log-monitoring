@@ -510,3 +510,19 @@ After entering the correct credentials, the authentication was successful and th
 *Figure 22: Kibana web interface successfully opened after authentication, confirming that Kibana is accessible and ready for further configuration.*
 
 **Result:** Kibana was successfully accessed through the browser and the **`elastic`** user authentication was completed successfully.
+
+### Step 23: Open Fleet
+
+After successfully logging in to Kibana, the main Kibana navigation menu was opened to access **Fleet**. Fleet is used to manage **Elastic Agents**, configure **Agent Policies**, and manage endpoint integrations.
+
+The following navigation path was used:
+
+**☰ Menu → Management → Fleet**
+
+The **Fleet** page provides the management interface required to configure the Elastic Agent and create the Agent Policy that will later be used for the Windows 11 endpoint.
+
+![Screenshot 23: Showing Kibana Fleet Navigation](images/22-kibana-fleet-navigation.png)
+
+*Figure 23: Kibana navigation panel displaying the **Fleet** option under **Management**.*
+
+**Result:** The Fleet management interface was successfully accessed and is ready for Fleet Server and Elastic Agent configuration.
