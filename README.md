@@ -638,3 +638,84 @@ https://192.168.29.106:8220
 
 **Result:** The `SOC-Lab-Fleet-Server` policy was successfully created, and the Fleet Server host and service token were generated. The next stage is to install and start Fleet Server on the Kali Linux machine.
 
+### Step 27: Download the Correct Elastic Agent
+
+Before downloading the Elastic Agent, the Kali Linux system architecture was checked to ensure that the correct package was selected.
+
+Run:
+
+```bash
+uname -m
+```
+
+The command should return:
+
+```text
+x86_64
+```
+
+![Screenshot 27: Kali Linux Terminal displaying the output of uname -m](images/27-kali-architecture.png)
+
+*Figure 27: Kali Linux Terminal displaying the system architecture as `x86_64`.*
+
+Next, return to the **Fleet → Add a Fleet Server** page and select the appropriate options:
+
+* **Operating system:** Linux
+* **Architecture:** x86_64
+* **Version:** 9.5.3
+
+The download package should be similar to:
+
+```text
+elastic-agent-9.5.3-linux-x86_64.tar.gz
+```
+
+![Screenshot 28: Fleet Add a Fleet Server page](images/28-fleet-server-platform-selection.png)
+
+*Figure 28: Fleet **Add a Fleet Server** page showing Linux, x86_64, and Elastic Agent version 9.5.3.*
+
+After selecting the correct package, click **Save and continue** / **Continue** to proceed with the Fleet Server installation.
+
+### Step 28: Run the Fleet Server Installation Command
+
+Return to the **Fleet → Add a Fleet Server** page and copy the **Linux x86_64 Fleet Server installation command** provided by Kibana.
+
+Run the copied command in the Kali Linux Terminal to install and enroll the Elastic Agent as a **Fleet Server**.
+
+![Screenshot 29: Fleet page displaying the Linux x86\_64 Fleet Server installation command](images/29-fleet-server-installation-command.png)
+
+*Figure 29: Fleet page displaying the Linux x86_64 Fleet Server installation command used to install and enroll the Elastic Agent on Kali Linux.*
+
+### Step 29: Verify the Elastic Agent Service
+
+The Elastic Agent service was further verified using the following command:
+
+```bash
+sudo systemctl status elastic-agent --no-pager
+```
+
+The expected output should show:
+
+```text
+Active: active (running)
+```
+
+![Screenshot 30: Terminal displaying the Elastic Agent service status](images/30-elastic-agent-service-status.png)
+
+*Figure 30: Terminal displaying the Elastic Agent service status as `Active: active (running)`.*
+
+Next, Fleet Server was verified to be listening on port **8220** using:
+
+```bash
+sudo ss -tulpn | grep 8220
+```
+
+Port **8220** is the communication port used by Fleet Server for Elastic Agent management and communication.
+
+![Screenshot 31: Terminal output showing Fleet Server listening on port 8220](images/31-fleet-server-port-8220.png)
+
+*Figure 31: Terminal output showing Fleet Server actively listening on port 8220.*
+
+These checks confirm that the **Elastic Agent service is running and Fleet Server is actively listening on port 8220**.
+
+
