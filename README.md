@@ -4,6 +4,58 @@ Hands-on Elastic SIEM lab demonstrating the deployment of Elasticsearch, Kibana,
 
 # Elastic SIEM Setup and Windows Endpoint Monitoring
 
+## 📑 Table of Contents
+
+- [📖 Project Overview](#-project-overview)
+- [🎯 Objectives](#-objectives)
+- [🖥️ Lab Environment](#-lab-environment)
+- [🛠️ Tools Used](#-tools-used)
+- [⚙️ Project Implementation](#-project-implementation)
+  - [In This Project, I Used](#in-this-project-i-used)
+  - [Step 1: Configure Kali Linux on VirtualBox](#step-1-configure-kali-linux-on-virtualbox)
+  - [Step 2: Check Kali Linux Version](#step-2-check-kali-linux-version)
+  - [Step 3: Update Kali Linux](#step-3-update-kali-linux)
+  - [Step 4: Install Required Dependencies](#step-4-install-required-dependencies)
+  - [Step 5: Add the Elastic Package Repository](#step-5-add-the-elastic-package-repository)
+  - [Step 6: Refresh the Package List](#step-6-refresh-the-package-list)
+  - [Step 7: Install Elasticsearch](#step-7-install-elasticsearch)
+  - [Step 8: Enable and Start Elasticsearch](#step-8-enable-and-start-elasticsearch)
+  - [Step 9: Verify Elasticsearch](#step-9-verify-elasticsearch)
+  - [Step 10: Reset the Elasticsearch Password](#step-10-reset-the-elasticsearch-password)
+  - [Step 11: Configure Elasticsearch](#step-11-configure-elasticsearch)
+  - [Step 12: Start Elasticsearch](#step-12-start-elasticsearch)
+  - [Step 13: Install Kibana](#step-13-install-kibana)
+  - [Step 14: Configure Kibana](#step-14-configure-kibana)
+  - [Step 15: Generate Kibana Enrollment Token](#step-15-generate-kibana-enrollment-token)
+  - [Step 16: Start Kibana](#step-16-start-kibana)
+  - [Step 17: Verify Kibana](#step-17-verify-kibana)
+  - [Step 18: Configure Kibana to Start Automatically](#step-18-configure-kibana-to-start-automatically)
+  - [Step 19: Verify Kibana Auto-Start](#step-19-verify-kibana-auto-start)
+  - [Step 20: Verify Kibana Service Status](#step-20-verify-kibana-service-status)
+  - [Step 21: Open Kibana in the Browser](#step-21-open-kibana-in-the-browser)
+  - [Step 22: Log in to Kibana](#step-22-log-in-to-kibana)
+  - [Step 23: Open Fleet](#step-23-open-fleet)
+  - [Step 24: Add the Fleet Encryption Key](#step-24-add-the-fleet-encryption-key)
+  - [Step 25: Restart Kibana and Access Fleet](#step-25-restart-kibana-and-access-fleet)
+  - [Step 26: Add a Fleet Server](#step-26-add-a-fleet-server)
+  - [Step 27: Download the Correct Elastic Agent](#step-27-download-the-correct-elastic-agent)
+  - [Step 28: Install Fleet Server](#step-28-install-fleet-server)
+  - [Step 29: Start Fleet Server](#step-29-start-fleet-server)
+  - [Step 30: Verify Fleet Server](#step-30-verify-fleet-server)
+  - [Step 31: Verify Fleet Server in Kibana](#step-31-verify-fleet-server-in-kibana)
+  - [Step 32: Create a Windows Agent Policy](#step-32-create-a-windows-agent-policy)
+  - [Step 33: Add the Windows Integration](#step-33-add-the-windows-integration)
+  - [Step 34: Search for the Windows Integration](#step-34-search-for-the-windows-integration)
+  - [Step 35: Add the Windows Integration](#step-35-add-the-windows-integration)
+  - [Step 36: Prepare the Windows 11 Virtual Machine](#step-36-prepare-the-windows-11-virtual-machine)
+  - [Step 37: Install and Enroll Elastic Agent](#step-37-install-and-enroll-elastic-agent)
+  - [Step 38: Verify Windows Agent Enrollment](#step-38-verify-windows-agent-enrollment)
+  - [Step 39: Verify Windows Agent Health](#step-39-verify-windows-agent-health)
+
+- [🧠 Skills Earned](#-skills-earned)
+- [🔑 Key Learnings](#-key-learnings)
+- [✅ Conclusion](#-conclusion)
+
 ## 📖 Project Overview
 
 This project demonstrates the implementation of a basic **Elastic SIEM lab environment** for centralized security monitoring and Windows endpoint log analysis. The lab was built using **Kali Linux** and **Windows 11** virtual machines, with Kali Linux deployed through **VirtualBox** and Windows 11 deployed through **VMware Workstation**.
