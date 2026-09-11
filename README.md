@@ -396,3 +396,55 @@ The configuration file was then closed, and no further changes were made at this
 ![Screenshot 17: Showing the Kibana Server Address Configuration](images/17-kibana-server-address.png)
 
 *Figure 17: Kibana configuration file showing `server.host: "0.0.0.0"` configured in `kibana.yml`.*
+
+### Step 18: Enroll Kibana with Elasticsearch
+
+The next step was to securely connect **Kibana** with the previously configured Elasticsearch instance using the **Kibana enrollment token** generated in Step 14.
+
+The Kibana setup utility was started using:
+
+```bash
+sudo /usr/share/kibana/bin/kibana-setup
+```
+
+The setup process prompted for an enrollment token:
+
+```text
+Enter your enrollment token:
+```
+
+The enrollment token generated earlier using the following command was entered:
+
+```bash
+sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+```
+
+The enrollment process successfully configured Kibana and established its secure connection with Elasticsearch.
+
+![Screenshot 18: Showing Kibana Enrollment with Elasticsearch](images/18-kibana-enrollment-with-elasticsearch.png)
+
+*Figure 18: Kibana setup process showing the enrollment token being entered and Kibana successfully enrolled with Elasticsearch.*
+
+**Result:** Kibana was successfully configured and enrolled with Elasticsearch.
+
+### Step 19: Enable Kibana to Start Automatically
+
+After successfully enrolling Kibana with Elasticsearch, the Kibana system service was configured to start automatically whenever the Kali Linux system boots.
+
+First, the systemd service configuration was reloaded:
+
+```bash
+sudo systemctl daemon-reload
+```
+
+Next, Kibana was enabled as a system service:
+
+```bash
+sudo systemctl enable kibana.service
+```
+
+This ensures that Kibana will automatically start when the Kali Linux virtual machine is restarted.
+
+![Screenshot 19: Showing Kibana Configured to Start Automatically](images/19-kibana-auto-start.png)
+
+*Figure 19: Kibana successfully enabled as a system service to start automatically with Kali Linux.*
