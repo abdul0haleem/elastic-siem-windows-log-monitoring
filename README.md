@@ -60,6 +60,51 @@ The Elastic Stack was configured on the Kali Linux virtual machine, including **
 
 The collected endpoint data was centralized in **Elasticsearch** and analyzed through **Kibana**, providing hands-on experience with **SIEM deployment, endpoint monitoring, centralized log collection, Fleet management, and security event analysis** in a controlled SOC lab environment.
 
+## 🏗️ Lab Architecture
+
+The lab environment consists of an **Elastic SIEM server, Kali Linux VM, and Windows 11 VM** distributed across **VirtualBox and VMware Workstation**.
+
+* **Kali Linux → VirtualBox → Elasticsearch + Kibana + Fleet Server**
+* **Windows 11 → VMware Workstation → Elastic Agent → Fleet Server**
+* **Elastic Agent → Fleet Server → Elasticsearch → Kibana**
+
+This project provides practical experience with **SIEM deployment, Fleet Server configuration, endpoint monitoring, Windows log collection, event analysis, and basic SOC operations** using the Elastic Stack.
+
+### 🌐 Lab Network Architecture
+
+```text
+                         HOST COMPUTER
+                              │
+              ┌───────────────┴───────────────┐
+              │                               │
+          VirtualBox                       VMware
+              │                               │
+              ▼                               ▼
+        Kali Linux VM                    Windows 11 VM
+              │                               │
+              │                          Elastic Agent
+              │                               │
+              ▼                               │
+       Elastic Stack                         │
+              │                               │
+      ┌───────┼────────┐                      │
+      │       │        │                      │
+      ▼       ▼        ▼                      │
+Elasticsearch Kibana Fleet Server ◄───────────┘
+      │       │        │
+      │       │        │
+      │       ▼        │
+      │   Web Browser  │
+      │       ▲        │
+      └───────┴────────┘
+          LAB NETWORK
+```
+
+The **Elastic Agent** installed on the Windows 11 VM collects **Windows Security, System, and Application logs** and sends the collected data through the **Fleet Server** to **Elasticsearch** for storage and processing.
+
+The **Kibana** interface running on the Kali Linux VM is used to access and visualize the collected Windows logs, investigate events, and perform basic SIEM monitoring and analysis.
+
+
 ## 🎯 Objectives
 
 - To deploy and configure a basic **Elastic SIEM environment** using Elasticsearch, Kibana, and Fleet Server.
