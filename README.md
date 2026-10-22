@@ -15,13 +15,13 @@ Hands-on Elastic SIEM lab demonstrating the deployment of Elasticsearch, Kibana,
 <a id="table-of-contents"></a>
 ## 📑 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Lab Architecture](#lab-architecture)
-  - [Lab Network Architecture](#lab-network-architecture)
-- [Objectives](#objectives)
-- [Lab Environment](#lab-environment)
-- [Tools Used](#tools-used)
-- [Project Implementation](#project-implementation)
+- [📖 Project Overview](#project-overview)
+- [🏗️ Lab Architecture](#lab-architecture)
+  - [🌐 Lab Network Architecture](#lab-network-architecture)
+- [🎯 Objectives](#objectives)
+- [🖥️ Lab Environment](#lab-environment)
+- [🛠️ Tools Used](#tools-used)
+- [⚙️ Project Implementation](#project-implementation)
   - [In This Project, I Used](#in-this-project-i-used)
   - [Step 1: Configure Kali Linux on VirtualBox](#step-1-configure-kali-linux-on-virtualbox)
   - [Step 2: Check Kali Linux Version](#step-2-check-kali-linux-version)
@@ -58,9 +58,9 @@ Hands-on Elastic SIEM lab demonstrating the deployment of Elasticsearch, Kibana,
   - [Step 33: Verify the Windows Agent in Kibana](#step-33-verify-the-windows-agent-in-kibana)
   - [Step 34: Verify Windows Logs in Discover](#step-34-verify-windows-logs-in-discover)
   - [Project Implementation Conclusion](#project-implementation-conclusion)
-- [Skills Earned](#skills-earned)
-- [Key Learnings](#key-learnings)
-- [Conclusion](#conclusion)
+- [🧠 Skills Earned](#skills-earned)
+- [🔑 Key Learnings](#key-learnings)
+- [✅ Conclusion](#conclusion)
 
 ---
 
